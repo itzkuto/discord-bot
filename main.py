@@ -31,7 +31,7 @@ async def load_commands():
 async def main():
     async with bot:
         await load_commands()
-        await bot.start(config.TOKEN)
+        await bot.start(os.environ.get('TOKEN'))
 
 
 asyncio.run(main())
